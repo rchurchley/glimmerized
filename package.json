@@ -1,0 +1,38 @@
+{
+  "name": "glimmerized",
+  "publisher": "rchurchley",
+  "displayName": "Glimmerized",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.34.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "scripts": {
+    "build": "npm run build:vscode",
+    "build:vscode": "npm run build:vscode:light && npm run build:vscode:dark && vsce package",
+    "build:vscode:light": "mustache colours.json templates/vscode/colours-light.mustache.json | mustache - templates/vscode/theme.mustache.json > themes/vscode/glimmerized-light.json",
+    "build:vscode:dark": "mustache colours.json templates/vscode/colours-dark.mustache.json | mustache - templates/vscode/theme.mustache.json > themes/vscode/glimmerized-dark.json",
+    "uninstall": "rm -rf ~/.vscode*/extensions/rchurchley.$npm_package_name-*"
+  },
+  "devDependencies": {
+    "mustache": "^3.0.1",
+    "vsce": "^1.64.0"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Glimmerized Light",
+        "uiTheme": "vs",
+        "path": "./themes/vscode/glimmerized-light.json"
+      },
+      {
+        "label": "Glimmerized Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/vscode/glimmerized-dark.json"
+      }
+    ]
+  }
+}
