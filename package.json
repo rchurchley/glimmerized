@@ -4,7 +4,7 @@
   "displayName": "Glimmerized",
   "description": "",
   "version": "0.0.1",
-  "repositories": "https://github.com/rchurchley/glimmerized",
+  "repository": "https://github.com/rchurchley/glimmerized",
   "engines": {
     "vscode": "^1.34.0"
   },
