@@ -4,6 +4,7 @@
   "displayName": "Glimmerized",
   "description": "",
   "version": "0.0.1",
+  "repositories": "https://github.com/rchurchley/glimmerized",
   "engines": {
     "vscode": "^1.34.0"
   },
@@ -13,8 +14,10 @@
   "scripts": {
     "build": "npm run build:vscode",
     "build:vscode": "npm run build:vscode:light && npm run build:vscode:dark && vsce package",
+    "build:typora": "npm run build:typora:light",
     "build:vscode:light": "mustache colours.json templates/vscode/colours-light.mustache.json | mustache - templates/vscode/theme.mustache.json > themes/vscode/glimmerized-light.json",
     "build:vscode:dark": "mustache colours.json templates/vscode/colours-dark.mustache.json | mustache - templates/vscode/theme.mustache.json > themes/vscode/glimmerized-dark.json",
+    "build:typora:light": "mustache colours.json templates/typora/colours-light.mustache.json | mustache - templates/typora/theme.mustache.css > themes/typora/glimmerized-light.css",
     "uninstall": "rm -rf ~/.vscode*/extensions/rchurchley.$npm_package_name-*"
   },
   "devDependencies": {
