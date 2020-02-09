@@ -1,4 +1,6 @@
 {
+  "scheme-name":                          "Glimmerized Light",
+
   "editor-background-default":            "{{white}}",
   "editor-background-highlight":          "{{white-bis}}",
   "editor-background-inverted":           "{{black-ter}}",
