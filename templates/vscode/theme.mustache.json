@@ -202,7 +202,7 @@
     "textCodeBlock.background":                             "{{window-background-default}}",
     "textLink.activeForeground":                            "{{editor-text-highlight}}",
     "textLink.foreground":                                  "{{editor-text-link}}",
-    "textPreformat.foreground":                             "{{window-background-default}}"
+    "textPreformat.foreground":                             "{{window-text-highlight}}"
   },
   "tokenColors": [
     {
