@@ -12,15 +12,15 @@
     "Themes"
   ],
   "scripts": {
-    "build": "npm run build:vscode",
+    "build": "npm run build:vscode && npm run build:blink",
     "build:vscode": "npm run build:vscode:light && npm run build:vscode:dark && vsce package",
     "build:vscode:light": "mustache colours.json templates/vscode/colours-light.mustache.json | mustache - templates/vscode/theme.mustache.json > themes/vscode/glimmerized-light.json",
     "build:vscode:dark": "mustache colours.json templates/vscode/colours-dark.mustache.json | mustache - templates/vscode/theme.mustache.json > themes/vscode/glimmerized-dark.json",
-    "uninstall": "rm -rf ~/.vscode*/extensions/rchurchley.$npm_package_name-*"
+    "build:blink": "mustache colours.json templates/blink/blink.js > themes/blink/glimmerized.js"
   },
   "devDependencies": {
     "mustache": "^4.0",
-    "vsce": "^1.73"
+    "vsce": "^1.74.0"
   },
   "contributes": {
     "themes": [
