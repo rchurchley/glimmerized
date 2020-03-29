@@ -389,7 +389,7 @@
     {
       "name": "Markdown - Heading",
       "scope": [ "markup.heading.markdown", "entity.name.section.markdown" ],
-      "settings": { "fontStyle": "bold", "foreground": "{{editor-text-yellow}}" }
+      "settings": { "fontStyle": "bold", "foreground": "{{editor-text-green}}" }
     },
     {
       "name": "Markdown - Link",
@@ -399,7 +399,7 @@
     {
       "name": "Markdown - Link Description (e.g. images)",
       "scope": [ "string.other.link.description.markdown" ],
-      "settings": { "foreground": "{{editor-text-green}}" }
+      "settings": { "foreground": "{{editor-text-yellow}}" }
     },
     {
       "name": "Markdown - Link URL",
