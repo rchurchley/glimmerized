@@ -1,4 +1,4 @@
-black       = '#0d0816';
+black       = '#141028';
 red         = '#ff80ca';
 green       = '#7dd9af';
 yellow      = '#ffe18f';
@@ -21,4 +21,4 @@ t.prefs_.set('color-palette-overrides',
 
 t.prefs_.set('cursor-color', 'rgba(0, 0, 0, 0.5)');
 t.prefs_.set('foreground-color', '#fcfbfe');
-t.prefs_.set('background-color', '#0d0816');
+t.prefs_.set('background-color', '#141028');
