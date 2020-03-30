@@ -9,14 +9,14 @@
   "white-bis":      "#f5f3fc",
   "white":          "#fcfbfe",
 
-  "red-medium":     "#e6008a",
-  "red-light":      "#ff80ca",
+  "red-medium":     "#e50684",
+  "red-light":      "#ff80c4",
   "yellow-medium":  "#b18968",
   "yellow-light":   "#ffe18f",
   "green-medium":   "#1da575",
   "green-light":    "#7dd9af",
   "blue-medium":    "#0075eb",
   "blue-light":     "#67b0fe",
-  "purple-medium":  "#8a61d1",
+  "purple-medium":  "#6c3cb4",
   "purple-light":   "#b69afe"
 }

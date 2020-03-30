@@ -1,5 +1,5 @@
 black       = '#141028';
-red         = '#ff80ca';
+red         = '#ff80c4';
 green       = '#7dd9af';
 yellow      = '#ffe18f';
 blue        = '#67b0fe';
