@@ -369,27 +369,27 @@
     {
       "name": "Markdown - Heading Punctuation",
       "scope": [ "heading.1.markdown punctuation.definition.heading.markdown" ],
-      "settings": { "foreground": "{{editor-text-blue}}" }
+      "settings": { "foreground": "{{editor-text-cyan}}" }
     },
     {
       "name": "Markdown - Heading Punctuation",
       "scope": [ "heading.2.markdown punctuation.definition.heading.markdown" ],
-      "settings": { "foreground": "{{editor-text-blue}}d0" }
+      "settings": { "foreground": "{{editor-text-cyan}}d0" }
     },
     {
       "name": "Markdown - Heading Punctuation",
       "scope": [ "heading.3.markdown punctuation.definition.heading.markdown" ],
-      "settings": { "foreground": "{{editor-text-blue}}a0" }
+      "settings": { "foreground": "{{editor-text-cyan}}a0" }
     },
     {
       "name": "Markdown - Heading Punctuation",
       "scope": [ "heading.4.markdown punctuation.definition.heading.markdown" ],
-      "settings": { "foreground": "{{editor-text-blue}}80" }
+      "settings": { "foreground": "{{editor-text-cyan}}80" }
     },
     {
       "name": "Markdown - Heading",
       "scope": [ "markup.heading.markdown", "entity.name.section.markdown" ],
-      "settings": { "fontStyle": "bold", "foreground": "{{editor-text-green}}" }
+      "settings": { "fontStyle": "bold", "foreground": "{{editor-text-cyan}}" }
     },
     {
       "name": "Markdown - Link",

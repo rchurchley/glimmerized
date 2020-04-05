@@ -4,7 +4,7 @@ green       = '{{green-light}}';
 yellow      = '{{yellow-light}}';
 blue        = '{{blue-light}}';
 magenta     = '{{purple-light}}';
-cyan        = '{{grey}}';
+cyan        = '{{indigo-light}}';
 white       = '{{grey-lighter}}';
 lightBlack  = '{{grey-darker}}';
 lightRed    = '{{red-dark}}';
@@ -12,7 +12,7 @@ lightGreen  = '{{green-dark}}';
 lightYellow = '{{yellow-dark}}';
 lightBlue   = '{{blue-dark}}';
 lightMagenta= '{{purple-dark}}';
-lightCyan   = '{{grey-darker}}';
+lightCyan   = '{{indigo-dark}}';
 lightWhite  = '{{white}}';
 
 t.prefs_.set('color-palette-overrides',

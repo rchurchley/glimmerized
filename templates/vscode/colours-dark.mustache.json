@@ -22,6 +22,7 @@
   "editor-text-red":                      "{{red-light}}",
   "editor-text-green":                    "{{green-light}}",
   "editor-text-blue":                     "{{blue-light}}",
+  "editor-text-cyan":                     "{{indigo-light}}",
   "editor-text-magenta":                  "{{purple-light}}",
   "editor-text-yellow":                   "{{yellow-light}}",
   "editor-bold-red":                      "{{red-medium}}",
@@ -69,7 +70,7 @@
   "terminal-text-red":                    "{{red-light}}",
   "terminal-text-green":                  "{{green-light}}",
   "terminal-text-blue":                   "{{blue-light}}",
-  "terminal-text-cyan":                   "{{grey}}",
+  "terminal-text-cyan":                   "{{indigo-light}}",
   "terminal-text-magenta":                "{{purple-light}}",
   "terminal-text-yellow":                 "{{yellow-light}}",
   "terminal-text-white":                  "{{grey-lighter}}",
@@ -77,9 +78,9 @@
   "terminal-bold-red":                    "{{red-medium}}",
   "terminal-bold-green":                  "{{green-medium}}",
   "terminal-bold-blue":                   "{{blue-medium}}",
-  "terminal-bold-cyan":                   "{{grey-darker}}",
+  "terminal-bold-cyan":                   "{{indigo-medium}}",
   "terminal-bold-magenta":                "{{purple-medium}}",
   "terminal-bold-yellow":                 "{{yellow-medium}}",
   "terminal-bold-white":                  "{{white}}",
-  "terminal-bold-black":                  "{{black-ter}}"
+  "terminal-bold-black":                  "{{grey-darker}}"
 }
