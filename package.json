@@ -14,8 +14,8 @@
   "scripts": {
     "build": "npm run build:vscode",
     "build:vscode": "npm run build:vscode:light && npm run build:vscode:dark && vsce package",
-    "build:vscode:light": "mustache colours.json templates/vscode/colours-light.mustache.json | mustache - templates/vscode/theme.mustache.json > themes/vscode/glimmerized-light.json",
-    "build:vscode:dark": "mustache colours.json templates/vscode/colours-dark.mustache.json | mustache - templates/vscode/theme.mustache.json > themes/vscode/glimmerized-dark.json",
+    "build:vscode:light": "mustache colours.json src/vscode/colours-light.mustache.json | mustache - src/vscode/theme.mustache.json > themes/vscode/glimmerized-light.json",
+    "build:vscode:dark": "mustache colours.json src/vscode/colours-dark.mustache.json | mustache - src/vscode/theme.mustache.json > themes/vscode/glimmerized-dark.json"
   },
   "devDependencies": {
     "mustache": "^4.0",
