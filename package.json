@@ -1,38 +1,31 @@
 {
   "name": "glimmerized",
-  "publisher": "rchurchley",
-  "displayName": "Glimmerized",
-  "description": "",
-  "version": "0.0.2",
-  "repository": "https://github.com/rchurchley/glimmerized",
-  "engines": {
-    "vscode": "^1.34.0"
-  },
-  "categories": [
-    "Themes"
-  ],
+  "version": "0.1.0",
+  "description": "A colour theme by Ross Churchley",
+  "type": "module",
+  "main": "glimmerized.js",
   "scripts": {
-    "build": "npm run build:vscode",
-    "build:vscode": "npm run build:vscode:light && npm run build:vscode:dark && vsce package",
-    "build:vscode:light": "mustache colours.json src/vscode/colours-light.mustache.json | mustache - src/vscode/theme.mustache.json > themes/vscode/glimmerized-light.json",
-    "build:vscode:dark": "mustache colours.json src/vscode/colours-dark.mustache.json | mustache - src/vscode/theme.mustache.json > themes/vscode/glimmerized-dark.json"
+    "build": "npm run build:pkg && npm run build:preview",
+    "build:pkg": "esbuild glimmerized.js --bundle --minify --format=esm --outfile=glimmerized.min.js",
+    "build:preview": "esbuild preview/preview.jsx --bundle --outfile=preview/preview.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rchurchley/glimmerized.git"
+  },
+  "author": "Ross Churchley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rchurchley/glimmerized/issues"
+  },
+  "homepage": "https://github.com/rchurchley/glimmerized#readme",
+  "dependencies": {
+    "culori": "^2.0.0"
   },
   "devDependencies": {
-    "mustache": "^4.0",
-    "vsce": "^1.74.0"
-  },
-  "contributes": {
-    "themes": [
-      {
-        "label": "Glimmerized Dark",
-        "uiTheme": "vs-dark",
-        "path": "./themes/vscode/glimmerized-dark.json"
-      },
-      {
-        "label": "Glimmerized Light",
-        "uiTheme": "vs",
-        "path": "./themes/vscode/glimmerized-light.json"
-      }
-    ]
+    "esbuild": "^0.13.15",
+    "mustache": "^4.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }
