@@ -6,27 +6,30 @@ import {
   oklch
 } from "culori"
 
-export const grayScale = gradient("#141029", ["#26233d", 3/11], ["#e5e4f8", 8/11], "#fcfcff")
+
+export const blackScale = gradient("#141029", "#26233d")
+export const grayScale = gradient("#26233d", "#e5e4f8")
+export const whiteScale = gradient("#e5e4f8", "#fcfcff")
 
 export const black = {
-  0: grayScale(0),
-  1: grayScale(1/11),
-  2: grayScale(2/11),
-  3: grayScale(3/11),
+  0: blackScale(0),
+  1: blackScale(1/3),
+  2: blackScale(2/3),
+  3: blackScale(3/3),
 }
 
 export const gray = {
-  0: grayScale(4/11),
-  1: grayScale(5/11),
-  2: grayScale(6/11),
-  3: grayScale(7/11),
+  0: grayScale(1/5),
+  1: grayScale(2/5),
+  2: grayScale(3/5),
+  3: grayScale(4/5),
 }
 
 export const white = {
-  0: grayScale(8/11),
-  1: grayScale(9/11),
-  2: grayScale(10/11),
-  3: grayScale(1),
+  0: whiteScale(0/3),
+  1: whiteScale(1/3),
+  2: whiteScale(2/3),
+  3: whiteScale(3/3),
 }
 
 export const blackest = black[0]
@@ -54,46 +57,53 @@ export const blue = {
   7: "#bfe4ff",
 }
 
-export const yellow = {
-  0: "#460b0f",
-  1: "#8b2a1b",
-  2: "#d6500d",
-  3: "#f7710e",
-  4: "#ffb00f",
-  5: "#fdcc59",
-  6: "#fce58a",
-  7: "#fffcb8",
+export const purple = {
+  1: "#3a136a",
+  2: "#4e1980",
+  3: "#6E35AE",
+  4: "#9c6bde",
 }
-
 
 export const green = {
-  0: "#10231c",
-  1: "#174f38",
-  2: "#1b7f56",
-  3: "#1da575",
-  4: "#54bf92",
-  5: "#7dd9af",
-  6: "#aee6cc",
-  7: "#dbf3e9",
+  1: "#065449",
+  2: "#007b6b",
+  3: "#00a18d",
+  4: "#49C5B1",
 }
 
-export const purple = {
-  0: "#230048",
-  1: "#3a136a",
-  2: "#52278d",
-  3: "#6c3cb4",
-  4: "#9c6bde",
-  5: "#cc99ff",
-  6: "#ddbeff",
-  7: "#efe1ff",
+export const yellow = {
+  0: "#f0b135",
+  1: "#ffe399",
+}
+
+export const orange = {
+  0: "#ff8d6f",
+}
+
+export const lime = {
+  0: "#a1bc41",
+  1: "#d4ec8e",
+}
+
+export const primaries = {
+  magenta: magenta[3],
+  purple: purple[2],
+  blue: blue[3],
+  green: green[3],
+  lime: lime[1],
+  yellow: yellow[1],
+  orange: orange[1],
+  black: black[1]
 }
 
 export const palette = {
   magenta: magenta,
-  purple: purple,
   blue: blue,
+  purple: purple,
   green: green,
+  lime: lime,
   yellow: yellow,
+  orange: orange,
 
   black: black,
   gray: gray,
@@ -115,10 +125,10 @@ export function gradient(...anchors) {
   return (x) => formatHex(
     interpolate(
       anchors,
-      "oklch",
+      "oklab",
       {
-        h: interpolatorSplineMonotone, 
-        l: interpolatorSplineMonotone, 
+        h: interpolatorSplineMonotone,
+        l: interpolatorSplineMonotone,
         c: interpolatorSplineMonotone
       }
     )(x)
