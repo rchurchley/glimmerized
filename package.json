@@ -7,9 +7,10 @@
     "vscode": "^1.98.0"
   },
   "scripts": {
-    "build": "npm run build:preview && npm run build:vscode",
+    "build": "npm run build:preview && npm run build:css && npm run build:vscode",
     "build:preview": "esbuild preview/preview.tsx --bundle --outfile=preview/out/preview.min.js && cp preview/preview.{css,html} preview/out/",
-    "build:vscode": "mkdir -p vscode/out && ts-node vscode/theme.ts > vscode/out/glimmerized-color-theme.json && vsce package --out vscode/out/glimmerized.vsix "
+    "build:vscode": "mkdir -p vscode/out && ts-node vscode/theme.ts > vscode/out/glimmerized-color-theme.json && vsce package --out vscode/out/glimmerized.vsix",
+    "build:css": "mkdir -p css/out && ts-node css/theme.ts > css/out/theme.css"
   },
   "repository": {
     "type": "git",
