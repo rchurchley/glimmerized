@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { formatHex, formatCss } from 'culori'
-import { black, white, themeColors, themeShades } from '../glimmerized'
+import { black, white, themeShades } from '../glimmerized'
 import { Swatches } from './swatches'
 import { contrast } from '../colors'
 
@@ -10,16 +10,17 @@ root.render(
   <section className="app">
     {
       [
-        { shades: themeShades.grey, n: 31 },
-        { shades: themeShades.red, n: 15 },
-        { shades: themeShades.blue, n: 15 },
-        { shades: themeShades.purple, n: 3 },
-        { shades: themeShades.green, n: 3 },
-        { shades: themeShades.yellow, n: 3 },
-      ].map(({shades, n}, i) =>
+        { shades: themeShades.grey, n: 31, ends: true},
+        { shades: themeShades.red, n: 7 },
+        { shades: themeShades.blue, n: 7 },
+        { shades: themeShades.purple, n: 7 },
+        { shades: themeShades.green, n: 7 },
+        { shades: themeShades.yellow, n: 7 },
+      ].map(({shades, n, ends}, i) =>
         <div key={i}>
           <Swatches
             colors={[...Array(n+2).keys()].map((i) => {
+              if (!ends && (i == 0 || i == n+1)) { return null }
               const color = shades(i / (n+1))
               return {
                 id: `${i}/${n+1}`,
@@ -32,7 +33,7 @@ root.render(
                   { background: white, color: color, text: contrast(color, white).toFixed(0) },
                 ]
               }
-            })}
+            }).filter(x => !!x)}
             black={black}
             white={white}
             selectedIndex={((n - 1) / 2)}
